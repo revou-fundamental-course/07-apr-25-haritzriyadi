@@ -1,0 +1,237 @@
+/* Reset dasar & Pengaturan Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Utilitas */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #f4f4f4;
+    padding-bottom: 10px; /* Ruang untuk banner */
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Ubah ke block untuk mobile nanti */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.photo-banner {
+    /* Ganti dengan gambar banner Anda */
+    background: url('path/to/your/banner.jpg') no-repeat center center/cover;
+    height: 300px; /* Sesuaikan tinggi banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Ganti jika teks tidak kontras dengan gambar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan teks agar terbaca */
+    margin-top: 10px; /* Jarak dari nav */
+}
+
+.photo-banner h1 {
+    font-size: 2.5em;
+}
+
+.page-title { /* Untuk judul halaman seperti Profil */
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e7e7e7;
+}
+
+/* Main Content & Sections */
+main {
+    padding: 20px 0;
+}
+
+section {
+    padding: 40px 20px; /* Padding atas/bawah 40px, kiri/kanan 20px */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Garis pemisah antar seksi */
+}
+
+section:last-child {
+    border-bottom: none; /* Hapus garis di seksi terakhir */
+}
+
+section h2, section h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#welcome h2 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/* Form Styling */
+#contact {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 700px; /* Batasi lebar form */
+    margin: 20px auto; /* Pusatkan form */
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Izinkan resize tinggi textarea */
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: block; /* Tampilkan di baris baru */
+    margin-top: 3px;
+}
+
+#form-output {
+    background-color: #e0f7fa;
+    border: 1px solid #b2ebf2;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Profile Page Specific Styles */
+.profile-content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.profile-content img {
+    display: block; /* Agar margin auto bekerja jika diperlukan */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Sudut membulat untuk gambar */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-content ul {
+    list-style-position: inside; /* Atur posisi bullet/number */
+    margin-left: 20px; /* Beri indentasi pada list */
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Responsive Design (Contoh untuk Mobile) */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Tampilkan item nav secara vertikal */
+        margin: 10px 0;
+    }
+
+    .photo-banner {
+        height: 200px; /* Kecilkan banner di mobile */
+    }
+
+    .photo-banner h1 {
+        font-size: 1.8em; /* Kecilkan judul banner */
+    }
+
+    section {
+        padding: 30px 15px; /* Kurangi padding seksi */
+    }
+
+    #contact {
+        max-width: 95%; /* Buat form lebih lebar di mobile */
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px; /* Sesuaikan ukuran font dasar */
+    }
+
+    .photo-banner h1 {
+        font-size: 1.5em;
+    }
+
+     button[type="submit"] {
+        width: 100%; /* Buat tombol full width */
+        padding: 15px;
+    }
+}

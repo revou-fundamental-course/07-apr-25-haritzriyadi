@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda Perusahaan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#vision-mission">Visi & Misi</a></li>
+                <li><a href="#contact">Hubungi Kami</a></li>
+                <li><a href="profile.html">Profil Kami</a></li>
+            </ul>
+        </nav>
+        <div class="photo-banner">
+            <h1>Selamat Datang di Perusahaan Kami</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Hi <span id="user-name">Tamu</span>!</h2>
+            <p>Terima kasih telah mengunjungi website kami.</p>
+        </section>
+
+        <section id="about">
+            <h2>Tentang Perusahaan</h2>
+            <p>
+                Perusahaan kami berdedikasi untuk memberikan solusi terbaik...
+            </p>
+        </section>
+
+        <section id="vision-mission">
+            <h2>Visi dan Misi</h2>
+            <h3>Visi</h3>
+            <p>
+                Menjadi pemimpin industri...
+            </p>
+            <h3>Misi</h3>
+            <p>
+                1. Memberikan produk berkualitas... <br>
+                2. Mengutamakan kepuasan pelanggan...
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Message Us</h2>
+            <form id="message-form">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                     <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                     <span class="error-message" id="message-error"></span>
+                </div>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+            <div id="form-output" style="margin-top: 15px;"></div> </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PT.Haritz . All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
